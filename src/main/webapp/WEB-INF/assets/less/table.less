@@ -1,0 +1,36 @@
+.common-table{
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	font-size:12px;
+	text-align:left;
+	table-layout: fixed;
+	> thead {
+		th{
+			padding:5px 0px 25px 15px;
+			border-top: 1px solid @header-border-color;
+			vertical-align: top;
+		}
+	}
+	> tbody > tr{
+		&:hover{
+			background-color:@left-nav-bg-hover-color;
+		}
+		&:nth-child(even)>td
+		{
+		background:@left-nav-bg-hover-color;
+		}
+		>td{
+			border-bottom: 1px solid @header-border-color;
+			vertical-align: middle;
+			color: @gray-light;
+			padding:15px;
+		}
+	}
+	.sh-line{
+		position: relative;
+		left: -18px;
+		top: -10px; 
+		color: @table-border-color;
+	}
+}

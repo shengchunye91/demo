@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/java/com/chun/manage=UTF-8
+encoding//src/main/java/com/chun/manage/action=UTF-8
+encoding//src/main/java/com/chun/wx=UTF-8
+encoding//src/main/java/com/chun/wx/handle=UTF-8
+encoding//src/main/java/com/chun/wx/handle/MessageProcessingHandler.java=UTF-8
+encoding//src/main/java/com/chun/wx/handle/MessageProcessingHandlerImpl.java=UTF-8
+encoding//src/main/java/com/chun/wx/inf=UTF-8
+encoding//src/main/java/com/chun/wx/util/EncryptUtils.java=UTF-8
+encoding/<project>=UTF-8

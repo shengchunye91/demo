@@ -1,0 +1,62 @@
+// File upload
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  .opacity(0);
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+#uploadPanel {
+	border-right: 1px solid #113547;
+	.navbar-text {
+		margin-top: 20px;
+	}
+	.dropdown-menu {
+		width: 500px;
+		overflow-y: auto;
+	    overflow-x: hidden;
+		max-height: 200px;
+		li {
+			position: relative;
+			padding: 5px 10px 0 10px;
+			width: 100%;
+			label {
+				color: @gray;
+				display: inline-block;
+				font-size: @font-size-small;
+				width: 200px;
+				margin: 0 10px 0 0; 
+				font-weight: 500;
+				.text-overflow();
+			}
+			.progress {
+				display: inline-block;
+				margin: 0 0 8px 0;
+				width: 205px;
+				height: 6px;
+			}
+			i {
+				color: @gray;
+				position: absolute;
+				right: 10px;
+				top: 4px;
+				&.fa {
+					cursor: pointer;
+					top: 8px;
+				}
+			}
+		}
+		.upload-result-clear {
+			a {
+				text-align: center;
+			}
+		}
+	}	
+}

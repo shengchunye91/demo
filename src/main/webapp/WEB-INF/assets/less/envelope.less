@@ -1,0 +1,63 @@
+// Common
+@import "common.less";
+// Components
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+
+// Utility classes
+@import "bootstrap/utilities.less";
+
+@import "notify.less";
+@import "fontawesome/font-awesome.less";
+#envelopeContents{
+	top: 30px;
+	p{
+		padding-left: 165px;
+	}
+	.envelopeTable{
+		margin-top: 35px;
+		padding: 0 70px 100px 30px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		.download{
+			border-top: 0 solid @header-border-color;
+			width: 130px;
+		}
+	}
+	.size-th,.type-th{
+		width:10%;
+	}
+	.descrip-th{
+		width: 40%;
+	}
+	.doc-th{
+		width:29%;
+	}
+	.doc-td{
+		padding: 6px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.envelope-tr{
+		td{
+			padding: 6px;
+			word-wrap:break-word;
+			word-break: break-word;
+		}
+		.envelope-download{
+			background-color: @badge-bg;
+			border-bottom: 0 solid header-border-color;
+			color: #FFF;
+			visibility: hidden;
+			font-weight: bold;
+			cursor: pointer;
+			i{
+				margin-left: 11px;
+			}
+		}
+		&:hover .envelope-download{
+			visibility:visible;
+		}
+	}
+}

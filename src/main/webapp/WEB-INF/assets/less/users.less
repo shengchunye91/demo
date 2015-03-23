@@ -1,0 +1,239 @@
+//user-operation
+#usersContents{
+	.user-operation{
+		padding:60px 50px 0;
+		.dropdown-chooser{
+			width: 160px;
+			min-width: 160px;
+			margin-right: 20px;
+		}
+		.user-search {
+			position:relative;
+			input{
+				border: 1px solid @search-bar-color;
+				padding-right: 17px;
+				width:200px;
+			}
+			.fa-search{
+				color:@fa-search;
+				position: absolute;
+				right: 8px;
+				top: 8px;
+				cursor: pointer;
+			}
+		}
+		.filter{
+			margin-left: 20px;
+			.btn-white{
+				.button-variant(#3D3D3D; #F8F8F8; #DBDBDB);
+			}
+			i.fa-angle-down{
+				padding-left:30px;
+			}
+		}
+		.edit-user{
+			margin-right: 10px;
+		}
+		.edit-user,.new-user{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.editUser-btn{
+			color:@brand-primary;
+			border: 1px solid @search-bar-color;
+			&:hover{
+				color: lighten(@brand-primary,10%);
+			}
+		}
+	}
+	// table style
+	.user-tablelist{
+		overflow-x:hidden;
+		overflow-y:auto;
+		top: 140px;
+		padding:0 60px;
+		.userDeactivate,.userdelete,.userAssignAdmin{
+			width: 7%;
+		}
+		.name-th{
+			width:50%;
+			text-align: left;
+		}
+		.signedup-th{
+			width:15%;
+			text-align: left;
+		}
+		.email-th{
+			width:35%;
+		}
+		.name-td{
+			.i-avatar-sm {
+				float: left;
+				margin: 0 12px 0 5px;
+				float: left;
+				border-radius: 50%;
+				position: relative;
+				top: -4px;
+			}
+			small{
+				font-size: smaller;
+			}
+			strong{
+				color: @brand-primary;
+				display:block;
+				font-size:120%;
+				overflow: hidden;
+				text-overflow:ellipsis;
+			}
+		}
+		.email-td{
+			text-align:right;
+			word-wrap:break-word;
+			word-break: break-word;
+		}
+	}
+	//assgin popover style
+	.userAssignAdmin{
+		position: relative; 
+		.popover{
+			left: 42px;
+			min-width:150px;
+			.arrow{
+			  	top: 38px;
+			 }
+			 .assign-roleradio{
+			  	margin-bottom: 0px;
+		  		input{
+		  			margin-right: 5px;
+		  		}
+		  		label{
+		  			vertical-align: middle;
+		  			font-weight:normal;
+		  		}
+		  	}
+		}
+	}
+	//dialog style
+  	.modal-dialog{
+		margin:200px auto auto 500px;
+		width:440px;
+ 	}
+  .modal-content{
+		background-color:@left-nav-bg-hover-color;
+		.modal-header{
+		 	 border-bottom:0;
+		}
+		.modal-body{
+			  font-size:large;
+			  text-align:center;
+			  padding:15px 62px;
+			  p{
+			  		word-break: break-word;
+					word-wrap: break-word;
+					color:@gray;
+			 }	
+ 		}
+		.modal-footer{
+			  border-top:0;
+			  padding-bottom:45px;
+			  .model-btn{
+			  	min-width: 120px;
+			  	font-size: larger;
+			  	padding:0;
+			  }
+			  .delete-btn, .active-btn,.assign-btn{
+			   		color:@btn-default-color;
+			  }
+			.delete-btn{
+			    background-color:@red-color;
+			}
+			.active-btn{
+			  	background-color:@gray-light;
+			 }
+			  .assign-btn{
+			  	background-color:@assign-btn-color;
+			  }
+			  .cancel-btn{
+				color:@gray-light;
+			  }	
+		}
+		.profile-info-form{
+			.control-label{
+				width: 20%;
+				vertical-align: top;
+			}
+			.form-control,.dropdown-chooser{
+				width:60%; 
+				display:inline-block;
+			}
+			.profile-error-info{
+				visibility: hidden;
+				display: inline-block;
+				position:absolute;
+				text-align: left;
+				width: 45%;
+				font-size: smaller;
+				i{
+					float: left;
+					margin-bottom:30px;
+				}
+			}
+		}	
+	}
+}
+#filteruser-drop
+{
+	margin: 0;
+	box-shadow: none;
+	.filtertype{
+		a{
+			white-space: normal;
+			.fa-caret-right{
+				margin-top:4px;
+			}
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			left:100%;
+			position: absolute;
+			padding: 5px 0;
+			margin-top: -26px;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			background-color: @dropdown-bg;
+			border-radius: 4px;
+			max-height:300px;
+			overflow-y: auto;
+			width: 160px;
+			list-style: none;
+			a{
+				display: block;
+				padding: 3px 20px;
+				color: #333;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			li > a {
+				float:left;
+				width:100%;
+				&:hover{
+					text-decoration: none;
+					#gradient  .vertical(@start-color: #F5F5F5; @end-color: #E8E8E8; @start-percent: 0%; @end-percent: 100%);
+				}
+			}
+		}
+		&:hover>ul{
+			visibility:visible;
+		}
+	}
+}
+#DetailUserModal .detail-dialog {
+	width: 800px;
+	margin: 200px auto auto auto;
+	.modal-content .modal-body{
+		font-size:inherit;
+	}
+}

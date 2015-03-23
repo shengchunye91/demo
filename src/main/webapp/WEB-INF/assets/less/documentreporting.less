@@ -1,0 +1,63 @@
+#documentreportingContent{
+	.docreport-company-selector{
+		display: inline-block;
+		width: 200px;
+		margin-left: 20px;
+	}
+	.docreport-title{
+		padding: 30px 20px 30px 5px;
+		color:@brand-primary;
+		font-size:15px;
+		font-weight:bold;
+		height:80px;
+	}
+	.doc-reportingTable{
+		padding: 0 20px;
+		top: 80px;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	.common-table{
+		table-layout: fixed;
+		thead>tr{
+		  text-align:left;
+		}
+		tbody>tr{
+		  text-align:left;
+		  height:60px;
+		}
+		tr>td{
+		  padding-right:0;
+		  &:first-child{
+		    width:30%;		    
+		  }
+		  &:nth-child(2){	
+		    width:20%;
+		  }
+		  &:nth-child(3){
+		    width:20%;
+		  }
+		  &:nth-child{
+		    width:25%;
+		  }
+		}
+		tr>th{
+		  padding-right:0;
+		}
+	}
+	.doc-th{
+		width: 30%;
+	}
+	.opentime-th{
+		width: 20%;
+	}
+	.senttime-th{
+		width: 20%;
+	}
+	.downloadtime-th{
+		width: 25%;
+	}
+	.doc-td{
+		.text-overflow;		
+	}
+}

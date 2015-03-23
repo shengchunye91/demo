@@ -1,0 +1,180 @@
+#companiesContents{
+	.companyHead{
+		padding:60px 50px 0;
+		.company-search{
+			position:relative;
+			input{
+				border: 1px solid @search-bar-color;
+				padding-right: 17px;
+				width:200px;
+			}
+			.fa-search{
+				color:@fa-search;
+				position: absolute;
+				right: 8px;
+				top: 8px;
+				cursor: pointer;
+			}
+		}
+	}
+	.fa-pencil-square-o{
+		color:@badge-bg;
+	}
+	.company-table{
+		overflow-x:hidden;
+		overflow-y:auto;
+		top: 140px;
+		padding:0 60px;
+		.comp-operate{
+		  		width:5%;
+		 }
+		 .comp-name{
+		 	width:40%;
+		 	text-align:left;
+		 }
+		 .comp-signup{
+		 	width:20%;
+		 	text-align:left;
+		 }
+		 .comp-descrip{
+			 width:30%;
+			 text-align:left;
+		 }
+	}
+	.changeCompanyLink{
+		color: @link-color;
+		display: block;
+		font-size: 120%;
+		strong{
+				display:block;
+				overflow: hidden;
+				text-overflow:ellipsis;
+			}
+	}
+	.comp-descrip-td{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	 .modal-dialog{
+			margin:200px auto auto 400px;
+			width:650px;
+			.modal-content{
+				background-color:@left-nav-bg-hover-color;
+				text-align:center;
+				padding:25px;
+				.modal-header{
+					 padding:0;
+					  .newcompany-title{
+						color:@badge-bg;
+					  }
+					  .close{
+						  margin-top: -15px;
+						  margin-right: -10px;
+						}
+				}
+				.modal-footer{
+					  border-top:0;
+				}
+			}		
+	  }	
+		.regionDepartmentContent{
+				text-align: left;
+				padding: 5px 0;
+				.regiondepartment{
+					display:inline-block;
+				}
+				.regiondepartment-block,.regiondepartment-block-edit{
+					display:inline-block;
+					position: relative;
+					.regiondepartment-name{
+					  		border: 1px solid #DDD;
+							padding: 2px;
+							border-radius: 4px;
+							width: 185px;
+							display: inline-block;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							overflow: hidden;
+							padding-right: 38px;
+							margin: 2px;
+							margin-right: 5px;
+							vertical-align: middle;
+						}
+					  i{
+							position: absolute;
+							right: 10px;
+							top: 8px;
+							cursor: pointer;
+						}
+						.region-edit{
+							right:25px;
+						}
+						input.regiondepartment-name{
+							outline:#94B6ED auto 5px;
+						}
+				}
+				
+		}
+		.addCompany-content{
+				.dropdown-menu{
+					min-width:125px;
+					top:-4px;
+					left:177px;
+					.arrow{
+						left: -14px;
+						border-width: 7px;
+					}
+				}
+				.arrow{
+					top: 62%;
+				}
+				.popover-content{
+					padding: 5px 7px;
+					.btn-default{
+						text-shadow: 0 0px 0 #FFF;
+					}
+					.btn-xs{
+					margin-right: 2px;
+					}
+				}	
+				.company-message-err{
+					color: @red-color;
+					text-align: left;
+					margin-top: -12px;
+					padding-left: 9px;
+				}
+				.region-block{
+					border-top: 1px solid #DDD;
+					padding-top: 15px;
+				}
+				.relationwarn{
+					 text-align: left;
+					 font-weight: bold;
+					 color: @badge-bg;
+				}
+		}
+}
+#deleteCompanyModal{
+	 .modal-dialog{
+	 	margin:200px auto auto 500px;
+		width:510px;
+		.delete-btn{
+			    background-color:@red-color;
+				color:@btn-default-color;
+				padding:0;
+				font-size:14px;
+				font-weight:600px;
+		}
+		.modal-header{
+			border-bottom: none;
+		}
+		.confirm-delete-msg{
+			font-size:18px;
+			span{
+				word-break: break-word;
+				word-wrap: break-word;
+			}
+		}
+	}
+}

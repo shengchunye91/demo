@@ -1,0 +1,244 @@
+#mainContainer {
+	z-index: 1;
+	padding-top: @navbar-height * 1.2;
+}
+#topNav {
+	z-index: 2;
+	position: relative;
+	.box-shadow(0px 4px 8px 0px #BBB);
+	margin-bottom: 0;
+	.container-fluid {
+		padding-left: 0;
+	}
+	.navbar-brand {
+		height: @navbar-height * 1.2; // 60px
+		font-size: @font-size-h2;
+		line-height: 1;
+		.fa {
+			margin-right: @padding-base-horizontal;
+		}
+	}
+	.navbar-right{
+		.search-bar{
+			border-right: 1px solid #113547;
+			padding: 16px;
+			input{
+				background-color: #103444;
+				color:#FFF;
+				border: none;
+				border-radius: 3px 0 0 3px;
+				padding-right: 25px;
+			}
+			.fa-search{
+				color:#2B6B8F;
+				position: absolute;
+				right: 25px;
+				top: 24px;
+				cursor: pointer;
+			}
+		}
+	
+		.message-warn{
+			border-right: 1px solid #113547;
+			.badge{
+				border-radius: 4px;
+				position: relative;
+				left: -18px;
+				top: -8px;
+			}
+		}
+		.i-avatar-xs{
+			border-radius: 50%;
+		}
+	}
+	a {
+		text-decoration: none;
+		background-color: inherit;
+	}
+}
+#mainContent {
+	> section {
+		padding: 0 15px;
+	}
+}
+#leftNav {
+	position: relative;
+	width: @left-nav-width;
+	font-size: ceil((@font-size-base * 1.33));
+	font-weight: 700;
+	background-color: @left-nav-bg-color;
+	.list-group {
+		border-radius: 0;
+		margin-bottom: 0;
+		padding-right: 2px;
+		padding-top: 30px;
+ 		.box-shadow(inset 0px 0px 5px 0px #BBB);
+	}
+	.list-group-item {
+		color: @brand-primary;
+		padding: 20px 15px;
+		border: none;
+		background-color: @left-nav-bg-color;
+		cursor: pointer;
+		// Round the first and last items
+		&:first-child {
+		  .border-top-radius(0);
+		}
+		&:last-child {
+		  .border-bottom-radius(0);
+		}
+		// Hover state
+		&:hover,
+		&:focus {
+		  text-decoration: none;
+		  color: darken(@brand-primary, 5%);
+		  background-color: @left-nav-bg-hover-color;
+		}
+		// Active class on item itself, not parent
+		&.active,
+		&.active:hover,
+		&.active:focus {
+			text-shadow: none;
+			background-image: none;
+		    filter: none;
+			z-index: 2; // Place active items above their siblings for proper border styling
+			color: @brand-primary;
+			background-color: @left-nav-bg-color;
+		}
+		> i {
+			width: @left-nav-icon-width;
+			margin: 0 @left-nav-icon-margin-right 0 @left-nav-icon-margin-left;
+		}
+	}
+}
+.list-group-item {
+	> .list-group-arrow, .list-group-arrow:after {
+		display: none;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: rgba(0, 0, 0, 0);
+		border-style: solid;
+		right: -1px;
+		border-width: 8px 8px 8px 0;
+		border-right-color: #DDD;
+	}
+	> .list-group-arrow {
+		top: 26px;
+	}
+	> .list-group-arrow:after {
+		content: " ";
+		right: -11px;
+		top: -8px;
+		border-right-color: #FFF;
+	}
+	&.active > .list-group-arrow, .list-group-arrow:after {
+		display: inline;
+	}
+	.sub-list-group {
+		padding-left: (@left-nav-icon-width + @left-nav-icon-margin-right + @left-nav-icon-margin-left);
+		padding-top: @padding-base-vertical;
+		display: none;
+	}
+	&.active .sub-list-group {
+		display: block;
+	}
+	.sub-list-group-item {
+		display: block;
+		font-size: @font-size-base;
+		color: @gray-light;
+		font-weight: 500;
+		padding: 2px 0;
+		cursor: pointer;
+		&.active {
+			color: @gray;
+			font-weight: 700;
+			cursor: auto;
+		}
+	}
+	.fa-chevron-down {
+		float: right;
+		padding-top: @padding-base-vertical;
+	}
+	.badge {
+		margin: 6px 26px 0 0;
+		border-radius: 4px;
+		font-size: @font-size-base;
+	}
+}
+@media (min-width: 768px) {
+	html,
+	body{
+		height:100%;
+		overflow: hidden;
+	}
+	.hbox{	
+		display: table;
+		table-layout: fixed;
+		border-spacing: 0;
+		width: 100%;
+		> aside,
+		> section{
+			display: table-cell;
+			vertical-align: top;
+			height: 100%;
+			float: none;
+		}
+		&.stretch{
+			height:100%;
+		}
+	}
+	.vbox{
+		display: table;
+		border-spacing:0;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		> section {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			position: absolute;
+		}
+	}
+	.scrollable {
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+@media (min-width: 768px) and (-ms-high-contrast:none) {
+	*::-ms-backdrop, .vbox { display: inline-block; } /* IE11 Hack */
+}
+
+@media print {
+  html, body, .hbox, .vbox{
+    height: auto;
+  }
+  .vbox{
+		> section,
+		> footer{
+			position: relative;
+		}
+	}
+}
+.scrollable{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.padding-scrollable{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.slimScrollBar{
+	border-radius: 5px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	background-clip: padding-box !important;
+}
+#allassetsContent{
+	>section{
+		top: 180px;
+	}
+}

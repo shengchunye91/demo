@@ -1,0 +1,36 @@
+#myprofileContents{
+	.myprofile-info{
+		border-left: 1px solid @header-border-color;
+		.profile-title{
+			color:@brand-primary;
+			padding-left:-15px;
+			margin-top: 0;
+			margin-bottom:42px;
+		}
+		.form-horizontal .control-label{
+			text-align: left;
+		}
+	}
+	.myprofile-info-form{
+		.control-label{
+				width: 20%;
+				vertical-align: top;
+			}
+			.form-control,.dropdown-chooser{
+				width:50%; 
+				display:inline-block;
+			}
+			.profile-error-info{
+				visibility: hidden;
+				display: inline-block;
+				position:absolute;
+				text-align: left;
+				width: 32%;
+				font-size: smaller;
+				i{
+					float: left;
+					margin-bottom:25px;
+				}
+			}
+	}
+}
